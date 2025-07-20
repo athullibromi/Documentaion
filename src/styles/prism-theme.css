@@ -1,0 +1,240 @@
+/* Custom Prism.js theme for documentation website */
+
+/* Base styles */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #e2e8f0; /* gray-200 */
+  background: none;
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+  font-size: 0.875rem;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  tab-size: 4;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: 1rem;
+  margin: 0;
+  overflow: auto;
+  border-radius: 0.5rem;
+  background: #111827; /* gray-900 */
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+  background: #f3f4f6; /* gray-100 */
+  color: #374151; /* gray-700 */
+  white-space: normal;
+}
+
+/* Token styles */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #6b7280; /* gray-500 */
+  font-style: italic;
+}
+
+.token.punctuation {
+  color: #9ca3af; /* gray-400 */
+}
+
+.token.namespace {
+  opacity: 0.7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #f87171; /* red-400 */
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #34d399; /* emerald-400 */
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #60a5fa; /* blue-400 */
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #a78bfa; /* violet-400 */
+}
+
+.token.function,
+.token.class-name {
+  color: #fbbf24; /* amber-400 */
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  color: #fb7185; /* rose-400 */
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+/* Language-specific styles */
+
+/* JSON */
+.language-json .token.property {
+  color: #60a5fa; /* blue-400 */
+}
+
+.language-json .token.string {
+  color: #34d399; /* emerald-400 */
+}
+
+.language-json .token.number {
+  color: #f87171; /* red-400 */
+}
+
+.language-json .token.boolean {
+  color: #a78bfa; /* violet-400 */
+}
+
+/* CSS */
+.language-css .token.selector {
+  color: #fbbf24; /* amber-400 */
+}
+
+.language-css .token.property {
+  color: #60a5fa; /* blue-400 */
+}
+
+/* HTML/XML */
+.language-markup .token.tag .token.tag,
+.language-markup .token.tag .token.punctuation {
+  color: #f87171; /* red-400 */
+}
+
+.language-markup .token.attr-name {
+  color: #fbbf24; /* amber-400 */
+}
+
+.language-markup .token.attr-value {
+  color: #34d399; /* emerald-400 */
+}
+
+/* JavaScript/TypeScript */
+.language-javascript .token.keyword,
+.language-typescript .token.keyword {
+  color: #a78bfa; /* violet-400 */
+}
+
+.language-javascript .token.function,
+.language-typescript .token.function {
+  color: #fbbf24; /* amber-400 */
+}
+
+.language-javascript .token.string,
+.language-typescript .token.string {
+  color: #34d399; /* emerald-400 */
+}
+
+/* Shell/Bash */
+.language-bash .token.function {
+  color: #60a5fa; /* blue-400 */
+}
+
+.language-bash .token.string {
+  color: #34d399; /* emerald-400 */
+}
+
+.language-bash .token.comment {
+  color: #6b7280; /* gray-500 */
+}
+
+/* Python */
+.language-python .token.keyword {
+  color: #a78bfa; /* violet-400 */
+}
+
+.language-python .token.function {
+  color: #fbbf24; /* amber-400 */
+}
+
+.language-python .token.string {
+  color: #34d399; /* emerald-400 */
+}
+
+.language-python .token.decorator {
+  color: #fb7185; /* rose-400 */
+}
+
+/* Line highlighting */
+.line-highlight {
+  background: rgba(251, 191, 36, 0.1); /* amber with opacity */
+  border-left: 4px solid #fbbf24; /* amber-400 */
+  padding-left: 0.75rem;
+  margin-left: -1rem;
+}
+
+/* Selection */
+code[class*="language-"]::-moz-selection,
+pre[class*="language-"]::-moz-selection,
+code[class*="language-"] ::-moz-selection,
+pre[class*="language-"] ::-moz-selection {
+  background: rgba(96, 165, 250, 0.3); /* blue-400 with opacity */
+}
+
+code[class*="language-"]::selection,
+pre[class*="language-"]::selection,
+code[class*="language-"] ::selection,
+pre[class*="language-"] ::selection {
+  background: rgba(96, 165, 250, 0.3); /* blue-400 with opacity */
+}
+
+/* Scrollbar for code blocks */
+pre[class*="language-"]::-webkit-scrollbar {
+  height: 8px;
+}
+
+pre[class*="language-"]::-webkit-scrollbar-track {
+  background: #374151; /* gray-700 */
+  border-radius: 4px;
+}
+
+pre[class*="language-"]::-webkit-scrollbar-thumb {
+  background: #6b7280; /* gray-500 */
+  border-radius: 4px;
+}
+
+pre[class*="language-"]::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af; /* gray-400 */
+}
