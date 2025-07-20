@@ -240,7 +240,7 @@ export default function DocumentPage({ document, section }: DocumentPageProps) {
     // Only run on client side after component is mounted
     if (!isMounted) return;
 
-    const element = document.getElementById(id);
+    const element = globalThis.document.getElementById(id);
     if (element) {
       // Calculate header height for offset
       const headerHeight = 80; // Approximate header height
