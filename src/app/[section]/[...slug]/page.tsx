@@ -36,7 +36,7 @@ export async function generateStaticParams() {
   const params: { section: string; slug: string[] }[] = [];
 
   for (const [section, items] of Object.entries(STATIC_NAVIGATION)) {
-    function extractPaths(navItems: Array<{ path: string; title: string; children?: Array<{ path: string; title: string; children?: unknown }> }>) {
+    function extractPaths(navItems: any[]) {
       for (const item of navItems) {
         // Skip FAQ as it has its own dedicated route
         if (item.path === '/faq') {
@@ -54,7 +54,7 @@ export async function generateStaticParams() {
           });
         }
 
-        if (item.children) {
+        if (item.children && Array.isArray(item.children)) {
           extractPaths(item.children);
         }
       }
