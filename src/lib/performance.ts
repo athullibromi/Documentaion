@@ -103,11 +103,11 @@ export class PerformanceMonitor {
     this.metrics.set('time-to-first-byte', ttfb);
 
     // DOM content loaded
-    const dcl = entry.domContentLoadedEventEnd - entry.navigationStart;
+    const dcl = entry.domContentLoadedEventEnd - entry.fetchStart;
     this.metrics.set('dom-content-loaded', dcl);
 
     // Load complete
-    const loadComplete = entry.loadEventEnd - entry.navigationStart;
+    const loadComplete = entry.loadEventEnd - entry.fetchStart;
     this.metrics.set('load-complete', loadComplete);
 
     // DNS lookup time
