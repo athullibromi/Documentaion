@@ -92,10 +92,10 @@ export default function CodeBlock({
     const normalizedLanguage = language.toLowerCase();
     
     // Check if language is supported by Prism
-    const supportedLanguage = Prism.languages[normalizedLanguage] ? normalizedLanguage : 'plaintext';
+    const supportedLanguage = Prism && Prism.languages && Prism.languages[normalizedLanguage] ? normalizedLanguage : 'plaintext';
     
     // Apply syntax highlighting
-    if (supportedLanguage !== 'plaintext') {
+    if (Prism && supportedLanguage !== 'plaintext') {
       const highlightedCode = Prism.highlight(code, Prism.languages[supportedLanguage], supportedLanguage);
       codeRef.current.innerHTML = highlightedCode;
     } else {
